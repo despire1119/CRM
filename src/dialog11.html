@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="http://image.suning.cn/public/component/citySelect/1.0.0/css/Snaddress.css" />
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+
+	<div class="crm-dialog marriage-status" style="height:400px; width:700px;">
+		<h2>会员管理区域</h2>
+		<dl class="clearfix text-dl">
+			<dt>标签描述：</dt>
+			<dd>会员管理区域</dd>
+		</dl>
+		<dl class="clearfix text-dl">
+			<dt>标签描述：</dt>
+			<dd><div id="area"></div></dd>
+		</dl>
+
+		<dl class="clearfix">
+			<dt>&nbsp;</dt>
+			<dd class="opt-bottom">
+				<a href="javascript:void(0);" class="btn-confirm" title="确定">确定</a>	
+				<a href="javascript:void(0);" class="btn-cancle" title="取消">取消</a>
+			</dd>
+		</dl>
+	</div>
+	<!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="http://image.suning.cn/public/component/citySelect/1.0.0/New.CitySelect.min.js"></script>
+    <script>
+    	$("#area").SnAddress({
+		   
+		    complete: function (items,bool) {
+			        if(bool){
+			        //组件初始化被执行
+			        }else{
+			        //选择地址后被执行
+			        }
+			        console.log(items);
+			    }
+		    }, [
+		        {name: '安徽', code: '110', id: '110'},
+		        {name: '黄山市', code: '559', id: '9010'},
+		        {name: '', code: '', id: ''},
+		        {name: '', code: '', id: ''}
+		    ]
+		)
+    </script>
+</body>
+</html>

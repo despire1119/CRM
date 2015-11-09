@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+     <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog" style="height:460px; width:700px;">
+        <h2>优秀案例参考</h2>
+        <div class="search-zone">
+            <span class="select-title">活动类型:</span>
+            <select class="select-text-style">
+                <option value="全部">全部</option>
+            </select>
+            <a href="javascript:void(0);" title="查询" class="btn-search">查询</a>
+        </div>
+        <div class="detail-sort-dialog">
+            <table class="results-content-table">
+                <tr class="ths-name">
+                    <th class="th-name w30">序号</th>
+                    <th class="th-name w80">活动名称</th>
+                    <th class="th-name w340">营销用语</th>
+                    <th class="th-name w80">操作</th>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name">1</td>
+                    <td class="td-name">空桶制冷节</td>
+                    <td class="td-name">营销用语营销用语营销用语营销用语营销销用语营销用语营销</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">复制</a></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name">2</td>
+                    <td class="td-name">空桶制冷节</td>
+                    <td class="td-name">营销用语营销用语营销用语营销用语营销销用语营销用语营销</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">复制</a></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name">3</td>
+                    <td class="td-name">空桶制冷节</td>
+                    <td class="td-name">营销用语营销用语营销用语营销用语营销销用语营销用语营销</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">复制</a></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name">4</td>
+                    <td class="td-name">空桶制冷节</td>
+                    <td class="td-name">营销用语营销用语营销用语营销用语营销销用语营销用语营销</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">复制</a></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name">5</td>
+                    <td class="td-name">空桶制冷节</td>
+                    <td class="td-name">营销用语营销用语营销用语营销用语营销销用语营销用语营销</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">复制</a></td>
+                </tr>
+            </table>
+        </div>
+        <dl class="clearfix">
+            <dd class="opt-top clearfix">
+                <a href="javascript:void(0);" class="btn-confirm" title="确定">确定</a> 
+            </dd>
+        </dl>
+    </div>
+    <!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

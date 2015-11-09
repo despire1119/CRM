@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <link rel="stylesheet" href="./assets/css/crm.css">
+     <link rel="stylesheet" href="./assets/css/calendar.css">
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog search-num" style="height:450px; width:700px;">
+        <h2>1天搜索点击量</h2>
+        <dl class="clearfix text-dl">
+            <dt>标签描述：</dt>
+            <dd>婚姻状况情况描述婚姻状况情况描述婚姻状况情况描述婚姻状况情况描述</dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>请选择：</dt>
+            <dd>
+                <label class="sort-wrap">
+                    <input type="radio" name="sort-type" class="sort-type">
+                    整体
+                </label>
+                <label class="sort-wrap">
+                    <input type="radio" name="sort-type" class="sort-type">
+                    事业部
+                </label>
+                <label class="sort-wrap">
+                    <input type="radio" name="sort-type" class="sort-type">
+                    品类
+                </label>
+                <label class="sort-wrap">
+                    <input type="radio" name="sort-type" class="sort-type">
+                    品牌
+                </label>
+                <div class="detail-sort clearfix">
+                    <!-- 没有选中的项 -->
+                    <div class="selected-items clearfix" style="display:none;"></div>
+                    <div class="search-zone clearfix">
+                        <input type="text" maxlength="80" class="search-input">
+                        <a href="javascript:void(0);" title="&#x641C;&#x7D22;" class="btn-search">搜索</a>
+                        <div class="search-tip">最多选择5个</div>
+                    </div>
+                    
+                    <ul class="sort-list clearfix">
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水食品</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水食品酒水</a></li>
+                        <li class="selected"><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li class="selected"><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        <li><a href="javascript:void(0);" title="">食品酒水</a></li>
+                        
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>值：</dt>
+            <dd>
+                <div class="time-input ">
+                    <input type="text" maxlength="40" class="num-input time-sel">
+                    <i class="icon-time"></i>
+                </div>
+                <div class="split-text">至</div>
+
+                <div class="time-input">
+                    <input type="text" maxlength="40" class="num-input time-sel">
+                    <i class="icon-time"></i>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>&nbsp;</dt>
+            <dd class="opt-bottom clearfix">
+                <a href="javascript:void(0);" class="btn-confirm" title="&#x786E;&#x5B9A;">确定</a> 
+                <a href="javascript:void(0);" class="btn-cancle" title="&#x53D6;&#x6D88;">取消</a>
+            </dd>
+        </dl>
+    </div>
+	<script src="./assets/js/ECode.calendar.js"></script>
+ 	<script src="./assets/js/crm.js"></script>
+</body>
+</html>

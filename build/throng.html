@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <link rel="stylesheet" href="./assets/css/crm.css">
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <div class="vmp-wrapper">
+        <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+        </div>
+        
+        <!-- 人群页展示主体内容 -->
+        <div class="tab-content">
+            <h2 class="tab-content-title">我的营销人群</h2>
+            <div class="throng-operation">
+                <span class="throng-new">
+                    <i class="icon"></i>新建营销人群
+                    <div class="throng-new-second">
+                        <a href="javasrcipt:;" class="throng-new-second-item">自定义人群</a>
+                        <a href="javasrcipt:;" class="throng-new-second-item">外部名单导入</a>
+                        <a href="javasrcipt:;" class="throng-new-second-item">内部名单导入</a>
+                    </div>
+                </span>                
+            </div>
+            <!-- 交叉并处理筛选结果 -->
+            <div class="throng-content">
+            
+                <div class="label-tab-content clearfix">
+                <!-- 筛选条件 -->
+                <div class="jurisdiction-category">
+                    <p class="jurisdiction-category-p">
+                        <span class="input-label">客户群ID：</span>
+                        <input type="text" class="input-text-style">
+                        <span class="input-label">工号：</span>
+                        <input type="text" class="input-text-style">
+                    </p> 
+                    <p class="jurisdiction-category-p">
+                        <span class="input-label">状态：</span>
+                        <select class="select-text-style">
+                        <option value="&#x5168;&#x90E8;">全部</option>
+                        </select>
+                        <span class="input-label">开始时间：</span>
+                        <input type="text" class="input-text-style timebox" placeholder="&#x8BF7;&#x9009;&#x62E9;&#x65E5;&#x671F;">
+                        <span class="input-label">结束时间：</span>
+                        <input type="text" class="input-text-style timebox" placeholder="&#x8BF7;&#x9009;&#x62E9;&#x65E5;&#x671F;">
+                        <a href="javascript:;" class="link-query">查询</a>
+                    </p>                    
+                </div>
+
+                <p class="throng-content-dotitle">
+                    <span class="query-title">交叉并处理</span><a href="javascript:;" class="query-link"><i class="icon icon1"></i>交集</a><a href="javascript:;" class="query-link"><i class="icon icon2"></i>叉集</a><a href="javascript:;" class="query-link"><i class="icon icon3"></i>并集</a><span class="query-warning"><i class="icon"></i>请选择您要进行交差并处理的客户群</span>
+                </p>
+                <p class="selected-items"><span class="query-title">已选客户群</span><a class="item" href="javascript:;">SMS_0713_110345123456<i class="cancle-selected"></i></a><a class="item" href="javascript:;">SMS_0713_110345123451<i class="cancle-selected"></i></a></p>
+
+                <!-- 筛选结果表格 -->
+                <table class="throng-table">
+                    <tr class="ths-name">
+                        <th class="th-name w185"><input type="checkbox">客户群ID</th>
+                        <th class="th-name w85">客户群模板ID</th>
+                        <th class="th-name w70">客户群名称</th>
+                        <th class="th-name w60">预估数量</th>
+                        <th class="th-name w60">实际数量</th>
+                        <th class="th-name w60">来源</th>
+                        <th class="th-name w80">到期时间</th>
+                        <th class="th-name w60">状态</th>
+                        <th class="th-name w85">人群筛选条件</th>
+                        <th class="th-name w80">操作</th>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">生效</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do disable-btn" href="javascript:;">透视分析</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">生效</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do" href="javascript:;">透视分析</a><a class="link-do" href="javascript:;">修改</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">生效</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do" href="javascript:;">透视分析</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">创建完成</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do" href="javascript:;">透视分析</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">生效</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do" href="javascript:;">透视分析</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                        <td class="td-name">10070716</td>
+                        <td class="td-name">空桶制冷节</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">51,399</td>
+                        <td class="td-name">标签会员</td>
+                        <td class="td-name">2012-12-12</td>
+                        <td class="td-name">生效</td>
+                        <td class="td-name">三年内有购</td>
+                        <td class="td-name td-link-wrap"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">执行</a><a class="link-do" href="javascript:;">透视分析</a></td>
+                    </tr>
+                </table>
+
+                <!-- 分页 -->
+                <div class="paging">
+                    <span class="item-span first">&lt;</span><span class="item-span current">1</span><span class="item-span">2</span><span class="item-span">3</span><span class="item-span">4</span><span class="special">…</span><span class="item-span">10</span><span class="item-span last">&gt;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <script src="./assets/js/crm.js"></script>
+</div></div></body>
+</html>

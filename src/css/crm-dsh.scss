@@ -1,0 +1,1931 @@
+/*
+ * Name:			common.css
+ * Introduction:	CRM 
+ * Author：		    15050410 DingShaohua
+ * Time:			2015-08-03
+ */
+@charset "utf-8";
+
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+body, button, input, select, textarea {
+	font: 12px/1.5 'Microsoft Yahei', tahoma, arial, \5b8b\4f53;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+fieldset, img {
+	border: 0;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+i, em, strong, th {
+	font-style: normal;
+	font-weight: normal;
+}
+.clear {
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+	background-color: #fbfbfb;
+}
+.crm-wrapper {
+	width: 1190px;
+	margin: 0 auto;
+}
+.crm-top-bar {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	padding: 15px 0;
+	background-color: #5871a7;
+
+	.crm-top-logo {
+		display: inline;
+		float: left;
+		width: 206px;
+		height: 25px;
+		background: url(images/sprite-crm.png) no-repeat 0 0;
+		line-height: 25px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.crm-top-user {
+		float: right;
+
+		.todo-detail {
+			// display: block;
+			display: none;
+			float: left;
+			width: 200px;
+			height: 30px;
+			background-color: #3d4f75;
+			border-radius: 15px;
+			line-height: 30px;
+			color: #fff;
+			font-size: 14px;
+			text-decoration: none;
+			cursor: pointer;
+			overflow: hidden;
+
+			.icon {
+				display: inline;
+				float: left;
+				width: 14px;
+				height: 12px;
+				margin: 9px 10px 9px 20px;
+				background: url(images/sprite-crm.png) no-repeat -16px -32px;
+			}
+			.num {
+				padding: 0 4px;
+				color: #ffba00;
+				font-size: 16px;
+				font-weight: bold;
+			}
+		}
+		.user-detail {
+			display: block;
+			float: left;
+			height: 30px;
+			margin-left: 40px;
+			line-height: 30px;
+			color: #fff;
+			font-size: 14px;
+
+			.icon {
+				display: block;
+				float: left;
+				width: 12px;
+				height: 14px;
+				margin: 8px 10px 8px 0;
+				background: url(images/sprite-crm.png) no-repeat 0 -30px;
+			}
+			.userID {
+				padding-left: 5px;
+			}
+		}
+		.user-exit {
+			display: block;
+			float: left;
+			height: 30px;
+			margin-left: 10px;
+			line-height: 30px;
+			color: #ffba00;
+			font-size: 14px;
+		}
+	}
+}
+.nav-tab {
+	float: left;
+	width: 170px;
+	height: 660px;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-top: 13px;
+	background-color: #eee;
+
+	.nav-tab-item {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 70px;
+		margin-bottom: 6px;
+		line-height: 70px;
+		color: #555;
+		font-size: 20px;
+		text-decoration: none;
+
+		i {
+			display: inline;
+			float: left;
+			width: 36px;
+			height: 36px;
+			margin: 17px 10px 17px 20px;
+
+			&.item-icon1 {
+				background: url(images/sprite-crm.png) no-repeat 0 -48px;
+			}
+			&.item-icon2 {
+				background: url(images/sprite-crm.png) no-repeat -37px -48px;
+			}
+			&.item-icon3 {
+				background: url(images/sprite-crm.png) no-repeat -74px -48px;
+			}
+			&.item-icon4 {
+				background: url(images/sprite-crm.png) no-repeat -111px -48px;
+			}
+		}
+		&:hover {
+			background-color: #fbfbfb;
+		}
+		&.current, &.current:hover, &.current:active {
+			background-color: #fbfbfb;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 29px;
+				right: 20px;
+				width: 7px;
+				height: 13px;
+				background: url(images/sprite-crm.png) no-repeat -34px -31px;
+			}
+		}
+	}
+}
+.tab-content {
+	position: relative;
+	float: right;
+	width: 990px;
+	margin-top: 30px;
+	overflow: hidden;
+
+	.tab-content-title {
+		height: 24px;
+		line-height: 24px;
+		color: #555;
+		font-size: 24px;
+		font-weight: normal;
+	}
+	
+	// 首页
+	.tab-content-list {
+		width: 990px;
+		margin-top: 20px;
+
+		.index-list-items {
+			width: 1000px;
+
+			.list-item {
+				position: relative;
+				display: inline;
+				float: left;
+				width: 218px;
+				height: 92px;
+				margin: 0 10px 10px 0;
+				padding: 10px;
+				border: 1px solid #eee;
+				background-color: #fff;
+				overflow: hidden;
+
+				.list-item-title {
+					width: 100%;
+					height: 18px;
+					line-height: 18px;
+					color: #555;
+					font-size: 18px;
+					font-weight: normal;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				.list-item-subtitle {
+					width: 100%;
+					height: 36px;
+					margin-top: 6px;
+					line-height: 18px;
+					color: #999;
+					font-size: 14px;
+					font-weight: normal;
+					overflow: hidden;
+				}
+				.btn-collection {
+					display: block;
+					width: 68px;
+					height: 24px;
+					margin-top: 6px;
+					border: 1px solid #5871a7;
+					border-radius: 2px;
+					background-color: #fff;
+					line-height: 24px;
+					color: #5871a7;
+					text-align: center;
+					text-decoration: none;
+
+					&:hover {
+						background-color: #5871a7;
+						color: #fff;
+					}
+				}
+				.btn-uncollection, .btn-uncollection:hover, .btn-uncollection:active {
+					display: block;
+					width: 68px;
+					height: 24px;
+					margin-top: 6px;
+					border: 1px solid #ccc;
+					border-radius: 2px;
+					background-color: #f6f6f6;
+					line-height: 24px;
+					color: #555;
+					text-align: center;
+					text-decoration: none;
+				}
+				&:hover {
+					border: 1px solid #5871a7;
+				}
+			}
+		}
+	}
+	// 标签页
+	.label-tab-title {
+		height: 20px;
+		margin-top: 20px;
+
+		.label-tab-title-item {
+			display: inline-block;
+			float: left;
+			height: 20px;
+			margin-right: 40px;
+			line-height: 20px;
+			color: #999;
+			font-size: 18px;
+			text-decoration: none;
+			overflow: hidden;
+
+			&:hover {
+				color: #555;
+			}
+			&.current, &.current:hover, &.current:active {
+				color: #555;
+			}
+		}
+	}
+	.chart-content {
+		width: 1000px;
+	    padding-top: 20px;
+	    .chart {
+	    	float: left;
+	    	width: 488px;
+	        height: 278px;
+	        margin-right: 10px;
+	        margin-bottom: 10px;
+	        border: 1px solid #eee;
+	        background-color: #fff;
+	    }
+	}
+	.label-tab-content {
+		display: none;
+		position: relative;
+		top: 10px;
+		opacity: 0;
+		margin-top: 20px;
+
+		.radio-channel {
+			width: 610px;
+			height: 44px;
+			padding: 8px 20px;
+			background-color: #f6f6f6;
+			line-height: 22px;
+			color: #555;
+			font-size: 14px;
+
+			.radio-channel-title {
+				display: inline-block;
+				width: 70px;
+				margin-right: 10px;
+				color: #999;
+				text-align: right;
+			}
+			input[type='radio'] {
+				margin-right: 5px;
+			}
+			.radio-label {
+				display: inline-block;
+				width: 75px;
+				cursor: pointer;
+			}
+		}
+		.description-tag {
+			height: 16px;
+			margin-top: 20px;
+
+			.description-tag-item {
+				position: relative;
+				display: block;
+				float: left;
+				height: 16px;
+				margin-right: 60px;
+				cursor: pointer;
+
+				span {
+					display: block;
+					line-height: 16px;
+					color: #555;
+					font-size: 16px;
+				}
+				&:hover span {
+					color: #5871a7;
+				}
+				.description-tag-item-second {
+					display: none;
+					opacity: 0;
+					position: absolute;
+					top: 21px;
+					width: 110px;
+					padding: 10px 0;
+					border: 1px solid #eee;
+					background-color: #fff;
+					background: rgba(255, 255, 255, .9);
+					filter: Alpha(opacity=90);
+					box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+
+					.second-item-name {
+						width: 100%;
+						height: 30px;
+						line-height: 30px;
+
+						a {
+							display: block;
+							color: #555;
+							font-size: 16px;
+							text-align: center;
+							text-decoration: none;
+
+							&:hover {
+								background-color: #f6f6f6;
+							}
+							&.current {
+								background-color: #5871a7;
+								color: #fff;
+							}
+						}
+					}
+				}
+				&.current {
+					span {
+						color: #5871a7;
+					}
+				}
+			}
+		}
+		.results-title-tag {
+			height: 20px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			line-height: 20px;
+			color: #999;
+			font-size: 14px;
+
+			.num {
+				padding: 0 4px;
+				// font-size: 16px;
+				// font-weight: bold;
+			}
+		}
+		.throng-new-category {
+			height: 30px;
+			padding: 33px 30px;
+			background-color: #f6f6f6;
+			line-height: 30px;
+			color: #999;
+			font-size: 14px;
+			.select-text-style {
+				width: 178px;
+				height: 30px;
+				margin-right: 30px;
+				border: 1px solid #ccc;
+				line-height: 30px;
+				color: #555;
+				font-size: 14px;
+			}
+			.link-query {
+				display: inline-block;
+				height: 26px;
+				padding: 0 20px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				line-height: 26px;
+				color: #555;
+				font-size: 14px;
+				text-align: center;
+				text-decoration: none;
+
+				&:hover {
+					background-color: #eee;
+				}
+			}
+		}
+		.jurisdiction-category {
+			height: 84px;
+			padding: 11px 20px;
+			background-color: #f6f6f6;
+			line-height: 30px;
+			color: #999;
+			font-size: 14px;
+			.jurisdiction-category-p {
+				padding: 5px 0;
+			}
+			.input-label {
+				display: inline-block;
+				width: 80px;
+				text-align: right;
+			}
+			.input-text-style {
+				width: 158px;
+				height: 30px;
+				padding: 0 10px;
+				border: 1px solid #ccc;
+				line-height: 30px;
+				color: #555;
+				font-size: 14px;
+				&::placeholder {
+					color: #ccc;
+				}
+			}
+			.select-text-style {
+				width: 180px;
+				height: 30px;
+				border: 1px solid #ccc;
+				line-height: 30px;
+				color: #555;
+				font-size: 14px;
+			}
+			.link-query {
+				display: inline-block;
+				height: 26px;
+				margin-left: 30px;
+				padding: 0 20px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				line-height: 26px;
+				color: #555;
+				font-size: 14px;
+				text-align: center;
+				text-decoration: none;
+
+				&:hover {
+					background-color: #eee;
+				}
+			}
+		}
+		.screen-results-none {
+			height: 40px;
+			margin-top: 30px;
+			line-height: 40px;
+			color: #555;
+			font-size: 14px;
+			text-align: center;
+			.icon {
+				display: inline-block;
+				position: relative;
+				top: 3px;
+				width: 16px;
+				height: 16px;
+				margin-right: 5px;
+				background: url(images/sprite-crm.png) no-repeat -34px -88px;
+			}
+			.num {
+				padding: 0 4px;
+			}
+			.link-back {
+				margin-left: 20px;
+				color: #5871a7;
+			}
+		}
+	}
+	// 人群
+	.throng-operation {
+		margin-top: 20px;
+
+		.throng-new {
+			display: block;
+			position: relative;
+			width: 160px;
+			height: 42px;
+			border-radius: 2px;
+			background-color: #5871a7;
+			line-height: 42px;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+
+			.icon {
+				display: inline;
+				float: left;
+				width: 18px;
+				height: 18px;
+				margin: 12px 5px 12px 20px;
+				background: url(images/sprite-crm.png) no-repeat -92px -28px;
+			}
+			.throng-new-second {
+				display: none;
+				opacity: 0;
+				position: absolute;
+				top: 47px;
+				left: 0;
+				width: 160px;
+				padding: 15px 30px;
+				border: 1px solid #eee;
+				background-color: #fff;
+				background: rgba(255, 255, 255, .9);
+				filter: Alpha(opacity=90);
+				box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+
+				.throng-new-second-item {
+					display: block;
+					float: left;
+					width: 158px;
+					height: 40px;
+					margin-top: 5px;
+					margin-bottom: 5px;
+					border: 1px solid #ccc;
+					border-radius: 2px;
+					background-color: #f6f6f6;
+					line-height: 40px;
+					color: #555;
+					font-size: 16px;
+					text-align: center;
+					text-decoration: none;
+					overflow: hidden;
+
+					&:hover {
+						background-color: #eee;
+					}
+				}
+			}
+			&:hover {
+				background-color: #425889;
+			}
+		}
+	}
+	.throng-content {
+		margin-top: 20px;
+
+		.throng-content-dotitle {
+			height: 44px;
+			background-color: #f6f6f6;
+			line-height: 44px;
+
+			.query-title {
+				display: inline-block;
+				margin-right: 20px;
+				margin-left: 20px;
+				color: #555;
+				font-size: 16px;
+			}
+			.query-link {
+				display: inline-block;
+				height: 24px;
+				margin-top: 10px;
+				margin-right: 10px;
+				padding: 0 12px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				background-color: #f6f6f6;
+				line-height: 24px;
+				color: #555;
+				font-size: 16px;
+				text-decoration: none;
+
+				.icon {
+					display: inline;
+					float: left;
+					width: 14px;
+					height: 14px;
+					margin: 5px 5px 5px 0;
+				}
+				.icon1 {
+					background: url(images/sprite-crm.png) no-repeat -60px -30px;
+				}
+				.icon2 {
+					background: url(images/sprite-crm.png) no-repeat -76px -30px;
+				}
+				.icon3 {
+					background: url(images/sprite-crm.png) no-repeat -44px -30px;
+				}
+				&:hover {
+					background-color: #eee;
+				}
+			}
+			.query-warning {
+				display: inline-block;
+				margin-left: 10px;
+				color: #f23d3d;
+				font-size: 14px;
+
+				.icon {
+					display: inline;
+					float: left;
+					width: 16px;
+					height: 16px;
+					margin-top: 14px;
+					margin-right: 5px;
+					background: url(images/sprite-crm.png) no-repeat 0 -87px;
+				}
+			}
+		}
+	}
+	.over-tab-content {
+		.over-success {
+			display: block;
+			width: 115px;
+			height: 118px;
+			margin: 100px auto 30px;
+		}
+		.over-title {
+			color: #555;
+			font-size: 30px;
+			text-align: center;
+		}
+		.over-buttons {
+			margin-top: 20px;
+			text-align: center;
+
+			.click-view-butt {
+				display: inline-block;
+				width: 158px;
+				height: 40px;
+				margin: 0 5px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				background-color: #f6f6f6;
+				line-height: 40px;
+				color: #555;
+				font-size: 16px;
+				text-align: center;
+				text-decoration: none;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #eee;
+				}
+			}
+		}
+		
+	}
+	.table-all-tag {
+		display: inline;
+		float: left;
+		width: 730px;
+	}
+	.table-new-tag {
+		display: inline;
+		float: right;
+		width: 240px;
+	}
+	.new-tag-title {
+		height: 34px;
+		padding: 0 20px;
+		line-height: 34px;
+		background-color: #eee;
+		color: #555;
+		font-size: 14px;
+
+		.num {
+			padding: 0 4px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	.scroll-hidden {
+		height: 270px;
+		overflow-y: scroll;
+	}
+	.estimate-num {
+		height: 25px;
+		padding: 10px 20px;
+		line-height: 25px;
+		background-color: #eee;
+		color: #555;
+		font-size: 14px;
+
+		span {
+			display: block;
+			float: left;
+			height: 25px;
+			line-height: 25px;
+		}
+		.num {
+			width: 80px;
+			padding: 0 4px;
+			border-bottom: 1px solid #999;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.count-down {
+			width: 80px;
+			padding: 0 4px;
+			border-bottom: 1px solid #999;
+			color: #999;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+
+			.seconds {
+				color: #f23d3d;
+			}
+		}
+		.estimate-btn {
+			display: block;
+			float: right;
+			width: 70px;
+			height: 24px;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			background-color: #f6f6f6;
+			line-height: 24px;
+			color: #555;
+			font-size: 14px;
+			text-align: center;
+			text-decoration: none;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+		.disable-btn, .disable-btn:active, .disable-btn:hover {
+			border: 1px solid #ccc;
+			background-color: #f6f6f6;
+			color: #ccc;
+			cursor: default;
+		}
+	}
+	.estimate-warning {
+		height: 22px;
+		margin: 0 20px;
+		line-height: 22px;
+		color: #f23d3d;
+		font-size: 14px;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.next-step-btn {
+		display: block;
+		float: right;
+		width: 158px;
+		height: 40px;
+		margin-top: 10px;
+		border-radius: 2px;
+		background-color: #5871a7;
+		line-height: 40px;
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		&:hover {
+			background-color: #425889;
+		}
+	}
+	.disable-btn, .disable-btn:active, .disable-btn:hover {
+		border: 1px solid #ccc;
+		background-color: #f6f6f6;
+		color: #ccc;
+		cursor: default;
+	}
+}
+.to-do-content {
+	margin-top: 30px;
+	.to-do-content-title {
+		height: 32px;
+		padding: 14px 0;
+		background-color: #f6f6f6;
+		line-height: 32px;
+		color: #555;
+		font-size: 16px;
+	}
+	.span-title-style {
+		margin-left: 15px;
+	}
+	.select-text-style {
+		width: 178px;
+		height: 30px;
+		margin-right: 15px;
+		border: 1px solid #ccc;
+		line-height: 30px;
+		color: #555;
+		font-size: 16px;
+	}
+	.link-query {
+		height: 28px;
+		margin-top: 1px;
+		margin-left: 50px;
+		padding: 3px 20px;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		line-height: 28px;
+		color: #555;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+
+		&:hover {
+			background-color: #eee;
+		}
+	}
+}
+//新建步骤
+.new-step {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 300px;
+
+	.step-list {
+		position: relative;
+		display: inline;
+		float: left;
+		width: 100px;
+		border-bottom: 2px solid #eee;
+		color: #999;
+		text-align: center;
+
+		.step-list-title {
+			height: 22px;
+			margin-bottom: 8px;
+			line-height: 22px;
+			font-size: 14px;
+		}
+		&:after {
+			content: attr(eq);
+			position: absolute;
+			display: block;
+			top: 22px;
+			left: 50%;
+			margin-left: -9px;
+			height: 18px;
+			width: 18px;
+			border-radius: 50%;
+			background-color: #ddd;
+			line-height: 18px;
+			color: #fff;
+			text-align: center;
+		}
+		&.current {
+			border-color: #a9b6d1;
+
+			.step-list-title {
+				color: #5871a7;
+			}
+			&:after {
+				background-color: #5871a7;
+			}
+		}
+	}
+}
+//表单
+.form-content {
+	margin-top: 20px;
+	font-size: 14px;
+
+	.form-dl {
+		display: block;
+		padding-bottom: 15px;
+		line-height: 30px;
+
+		.form-dt {
+			float: left;
+			width: 110px;
+			text-align: right;
+
+			.form-dt-label {
+				margin-right: 15px;
+				color: #999;
+			}
+		}
+		.form-dd {
+			position: relative;
+			float: left;
+			.form-dd-condition {
+				max-width: 580px;
+				line-height: 30px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.form-dd-total-num {
+				position: absolute;
+				right: -120px;
+				top: 0;
+				height: 100%;
+				width: 100px;
+
+				.total-num-text {
+					position: absolute;
+					top: 50%;
+					height: 30px;
+					line-height: 30px;
+					margin-top: -15px;
+
+					.num {
+						padding: 0 4px;
+						color: #555;
+						font-size: 18px;
+						font-weight: bold;
+					}
+				}
+			}
+			.textbox {
+				height: 30px;
+				line-height: 30px;
+				width: 178px;
+				border: 1px solid #ccc;
+				padding: 0 10px;
+				font-size: 14px;
+
+				&::placeholder {
+					color: #ccc;
+				}
+			}
+			.textbox:focus, .textarea:focus {
+				border-color: #5871a7;
+			}
+			.input-value-length {
+				margin-left: 10px;
+				color: #999;
+				font-size: 14px;
+			}
+			input[type='radio'] {
+				margin-right: 5px;
+			}
+			.radio-label {
+				display: inline-block;
+				width: 75px;
+				cursor: pointer;
+			}
+			/*差集方式*/
+			.dif-style{
+				position: relative;
+				float: left;
+				height: 110px;
+				width: 170px;
+				margin-right: 10px;
+				border: 2px solid #eee;
+				background-color: #fff;
+				cursor: pointer;
+				overflow: hidden;
+				img{
+					display: block;
+					height: 60px;
+					width: 60px;
+					margin:15px auto 10px auto;
+				}
+				.style-opt{
+					width: 170px;
+					height: 24px;
+					line-height: 24px;
+					text-align: center;
+					white-space: nowrap;
+					overflow: hidden;
+					.select-type{
+						vertical-align:middle;
+					}
+				}
+				&:hover {
+					border: 2px solid #5871a7;
+				}
+				&.current {
+					border: 2px solid #5871a7;
+					&:after {
+						content: '';
+						position: absolute;
+						right: -2px;
+						bottom: -2px;
+						width: 20px;
+						height: 20px;
+						background: url(images/sprite-crm.png) no-repeat -94px -86px;
+					}
+				}
+			}
+		}
+		&:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+	}
+	.storage-data-btn {
+		display: inline-block;
+		width: 158px;
+		height: 40px;
+		margin-top: 20px;
+		margin-right: 20px;
+		border-radius: 2px;
+		background-color: #5871a7;
+		line-height: 40px;
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		&:hover {
+			background-color: #425889;
+		}
+		&.disable-btn, &.disable-btn:active, &.disable-btn:hover {
+			border: 1px solid #ccc;
+			background-color: #f6f6f6;
+			color: #ccc;
+			cursor: default;
+		}
+	}
+	.list-import-btn {
+        height: 26px;
+        margin-left: 10px;
+        padding: 0 6px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #f6f6f6;
+        line-height: 26px;
+        color: #555;
+        cursor: pointer;
+    }
+    .input-file {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 300px;
+        height: 32px;
+        background-color: #eee;
+        font-size: 450px;
+        cursor: pointer;
+        filter: alpha(opacity=0);
+    }
+    .download-table {
+        margin-left: 10px;
+        color: #5871a7;
+    }
+}
+//表格
+.results-content-table {
+	width: 100%;
+	table-layout: fixed;
+
+	.ths-name {
+		background-color: #eee;
+
+		.th-name {
+			height: 34px;
+			padding-left: 20px;
+			line-height: 34px;
+			color: #999;
+			font-size: 14px;
+			text-align: left;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+	.tds-name {
+		.td-name {
+			height: 44px;
+			padding-left: 20px;
+			border-bottom: 1px solid #eee;
+			line-height: 44px;
+			color: #555;
+			font-size: 14px;
+			text-align: left;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			.link-do {
+				margin-right: 10px;
+				color: #5871a7;
+
+				&.current {
+					color: #ccc;
+					cursor: default;
+					text-decoration: none;
+				}
+			}
+		}
+		&:hover {
+			background-color: #f6f6f6;
+		}
+	}
+	//列宽
+	.w80 {
+		width: 80px;
+	}
+	.w100 {
+		width: 100px;
+	}
+	.w110 {
+		width: 110px;
+	}
+	.w120 {
+		width: 120px;
+	}
+	.w200 {
+		width: 200px;
+	}
+	.w440 {
+		width: 440px;
+	}
+	.w510 {
+		width: 510px;
+	}
+}
+//人群特殊表格
+.throng-table {
+	width: 100%;
+	table-layout: fixed;
+
+	.ths-name {
+		background-color: #eee;
+
+		.th-name {
+			height: 34px;
+			padding-left: 8px;
+			padding-right: 6px;
+			line-height: 34px;
+			color: #999;
+			font-size: 14px;
+			text-align: left;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			input[type='checkbox'] {
+				margin-right: 4px;
+			}
+		}
+	}
+	.tds-name {
+		.td-name {
+			height: 44px;
+			padding-left: 8px;
+			padding-right: 6px;
+			border-bottom: 1px solid #eee;
+			line-height: 44px;
+			color: #555;
+			font-size: 14px;
+			text-align: left;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			input[type='checkbox'] {
+				margin-right: 4px;
+			}
+			.link-do {
+				display: inline-block;
+				margin-right: 4px;
+				color: #5871a7;
+				font-size: 12px;
+
+				&.current {
+					color: #ccc;
+					cursor: default;
+					text-decoration: none;
+				}
+			}
+		}
+		&:hover {
+			background-color: #f6f6f6;
+		}
+		.td-link-wrap {
+			line-height: 18px;
+			white-space: normal;
+		}
+	}
+	//列宽
+	.w185 {
+		width: 185px;
+	}
+	.w85 {
+		width: 85px;
+	}
+	.w80 {
+		width: 80px;
+	}
+	.w70 {
+		width: 70px;
+	}
+	.w60 {
+		width: 60px;
+	}
+}
+// 分页
+.paging {
+	margin-top: 10px;
+	text-align: center;
+
+	.item-span {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		background-color: #eee;
+		line-height: 30px;
+		color: #555;
+		font-size: 14px;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #5871a7;
+			color: #fff;
+		}
+		&.current {
+			background-color: #5871a7;
+			color: #fff;
+		}
+	}
+	.first, .last {
+		color: #999;
+	}
+	.special {
+		display: inline-block;
+		width: 12px;
+		height: 30px;
+		margin-right: 10px;
+		line-height: 30px;
+		color: #555;
+		font-size: 14px;
+		text-align: center;
+	}
+}
+//404
+.crm-404 {
+	width: 400px;
+	height: 70px;
+	margin: 200px auto;
+	padding: 30px 0 30px 80px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	.icon {
+		display: block;
+		float: left;
+		width: 70px;
+		height: 70px;
+		margin-right: 20px;
+		background: url(images/sprite-crm.png) no-repeat 0 -108px;
+	}
+	.crm-404-title {
+		height: 45px;
+		line-height: 45px;
+		color: #555;
+		font-size: 24px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.crm-404-description {
+		height: 20px;
+		line-height: 20px;
+		color: #999;
+		font-size: 14px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+//弹出
+.crm-dialog {
+	background-color: #FFF;
+	&.detail-scan{
+		dl{
+			width: 100%;
+			height: 24px;
+			margin-bottom: 2px;
+			font:normal 14px/24px 'Microsoft Yahei';
+			white-space: nowrap;
+			overflow: hidden;
+			.title{
+				width: 160px;
+				height: 24px;
+				margin-right: 20px;
+				overflow: hidden;
+				text-align: left;
+				color: #999;
+			}
+			.data{
+				width: 260px;
+				height: 24px;
+				overflow: hidden;
+				text-align: left;
+				color: #555;
+				
+			}
+			&.btn-dl{
+				height: 36px;
+				margin-bottom: 40px;
+				margin-top: 28px;
+				.data{
+					
+					height: 36px;
+				}
+			}
+
+		}
+	}
+	h2{
+		clear: both;
+		margin-bottom: 30px;
+		font: normal 24px/1.2 'Microsoft Yahei';
+		color:#555; 
+		white-space: nowrap;
+	}
+	.tip-content{
+		width: 280px;
+		margin: 0 auto;
+		color: #555;
+		i{ 
+			display: block;
+			float: left;
+			width: 16px;
+			height: 16px;
+			margin: 2px 10px;
+			background: url(images/icon-tips.png) no-repeat;
+		}
+		span{
+			font: normal 16px/20px 'Microsoft Yahei';
+		}
+	}
+	.tip-confirm{
+		margin: 30px auto 40px auto;
+	}
+	.btn-confirm{
+		display: block;
+		width: 98px;
+		height: 34px;	
+		border: 1px solid #CCC;
+		border-radius: 5px;
+		background-color: #f6f6f6;
+		font:normal 16px/34px 'Microsoft Yahei';
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		color: #555;
+		overflow: hidden;
+	}
+	.btn-cancle{
+		float: left;
+		line-height: 36px;
+		margin-left: 20px;
+	}
+	dl{
+		margin-bottom: 20px;
+		font:normal 14px/30px 'Microsoft Yahei';
+		&.text-dl{
+			margin-bottom: 10px;
+		}
+		dt{
+			float: left;
+			width: 70px;
+			overflow: hidden;
+			color: #999;
+			text-align: right;
+			margin-right: 10px;
+		}
+		dd{
+			float: left;
+			
+			overflow: hidden;
+			color:#555; 
+			&.opt-bottom{
+				margin-bottom: 40px;
+			}
+			&.limit-widt{
+				width: 280px;
+				height: 30px;
+				overflow: hidden;
+			}
+			.auth-scope{
+				width: 350px;
+				height: 230px;
+				border: 1px solid #ccc;
+				overflow-x:hidden;
+				overflow-y:auto;  
+
+				li{
+					width: 320px;
+					height:22px;
+					margin-top: 10px;
+					line-height: 22px;
+					margin-left: 15px;
+				}
+			}
+			&.time-wrap{
+				position:relative;
+				width: 200px;
+				height: 30px;
+				overflow: hidden;
+			}
+			.role-name{
+				height: 28px;
+				width: 200px;
+				border: 1px solid #ccc;
+				line-height: 28px;
+				text-indent: 15px;
+			}
+			.check-item{
+				float: left;
+				width: 90px;
+				height: 30px;
+				overflow: hidden;
+				input[type=checkbox]{
+					float: left;
+					margin: 9px 5px 0 0;
+				}
+				span{
+					float: left;
+				}
+			}
+			.role-desc{
+				height: 28px;
+				width: 350px;
+				border: 1px solid #ccc;
+				line-height: 28px;
+				text-indent: 15px;
+
+			}
+			.time-sel{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 198px;
+				height: 28px;
+				border:1px solid #CCC;
+				text-indent: 10px;
+			}
+			.icon-time{
+				position: absolute; 
+				top:8px;
+				display: block;
+				right: 5px;
+				width: 22px;
+				height: 15px;
+				background: url(images/sprite-crm.png) no-repeat -112px -30px;
+			}
+			.btn-confirm{
+				float: left;
+			}
+			.num-input{
+				width: 60px;
+				height: 30px;
+				border: 1px solid #CCC;
+				line-height: 28px;
+				text-indent: 5px;
+			}
+			.split-text{
+				display: inline-block;
+				margin: 0 10px;
+			}
+			.sort-wrap{
+				float: left;
+				display: block;
+				height: 30px;
+				width: 90px;
+				overflow: hidden;
+				.sort-type{
+					float: left;
+					margin: 9px 5px 0 0;
+				}
+			}
+			.detail-sort{
+				clear: both;
+				width: 568px;
+				border:1px solid #ccc;
+				.selected-items{
+					width: 100%;
+					margin:10px 0;
+					overflow: hidden;
+					.item{
+						float: left;
+						height: 26px;
+						background-color: #eee;
+						margin-left: 10px;
+						padding:0 5px;
+						.i-name{
+							float: left;
+							height: 26px;
+							width: auto;
+							max-width: 92px;
+							
+							font:normal 14px/26px 'Microsoft Yahei';
+							text-overflow:ellipsis;
+							white-space: nowrap;
+							overflow: hidden;	
+						}
+						.cancle-selected{ 
+							display: none;
+							float: left;
+							width: 9px;
+							height: 9px;
+							margin: 9px 0 0 5px;
+							background: url(images/sprite-crm.png) no-repeat -21px -91px;
+							cursor: pointer;
+						}
+						&.hover{
+							background-color: #5871a7;
+							color: #FFF;
+						}
+					}
+				}
+				.select-tips{
+					height: 30px;
+					width: 100%;
+					line-height: 30px;
+					background-color: #F6f6f6;
+					color: #999;
+					text-indent: 10px;
+					overflow: hidden;
+				}
+				.sort-list{
+					width: 553px;
+					height: 84px;
+					padding: 6px 5px 10px 10px;
+					overflow: auto;
+					li{
+						float: left;
+						width: 90px;
+						height: 22px;
+						margin:0 16px 10px 0; 
+						line-height: 22px;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+						&.selected{
+							a{
+								color: #ccc;
+							}	
+						}
+						a{
+
+							&:hover{
+								color: #5871a7;
+							}
+							
+						}
+					}
+				}
+
+				.search-zone{
+					height: 40px;
+					width: 100%;
+					padding-top: 10px;
+					background-color: #f6f6f6;
+					overflow: hidden;
+					.search-input{
+						float: left;
+						height: 28px;
+						width: 200px;
+						margin: 0 10px;
+						border: 1px solid #ccc;
+						font-size: 14px;
+						line-height: 28px;
+						text-indent: 10px;
+					}
+					.btn-search{
+						float: left;
+						height: 28px;
+						width: 70px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						font:normal 14px/28px 'Microsoft Yahei';
+						color: #555;
+						text-align: center;
+						text-decoration: none;
+						cursor: pointer;
+					}
+					.search-tip{
+						float: left;
+						width: auto;
+						max-width: 200px !important;
+						margin-left: 30px;
+						color: #999;
+						line-height: 30px;
+					}
+				}
+
+				.no-result{
+					width: 570px;
+					height: 100px;
+					text-align: center;
+					overflow: hidden;
+					.tip-wrap{
+						margin-top: 30px;
+						padding-left: 180px;
+					}
+					.icon{
+						float: left;
+						display: block;
+						width: 16px;
+						height: 16px;
+						margin: 4px 10px 0 10px;
+						background: url(images/sprite-crm.png) no-repeat -34px -88px;;
+					}
+					span{
+						float: left;
+						line-height: 24px;
+						em{
+							color: #f23d3d;
+							margin: 0 3px;
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+
+	.crm-dialog-title {
+		width: 810px;
+		height: 46px;
+		margin-bottom: 24px;
+		line-height: 46px;
+		color: #555;
+		font-size: 36px;
+		font-weight: normal;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.crm-dialog-search-title {
+		height: 32px;
+		margin-bottom: 30px;
+
+		.link-search {
+			display: inline;
+			float: left;
+			height: 30px;
+			margin-left: 10px;
+			padding: 0 20px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			line-height: 28px;
+			color: #555;
+			font-size: 16px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #f6f6f6;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+	}
+	.crm-dialog-tag-description {
+		line-height: 70px;
+		color: #555;
+		font-size: 16px;
+
+		.tag-title {
+			display: inline;
+			float: left;
+			width: 90px;
+			color: #999;
+			text-align: right;
+		}
+		.tag-input-name {
+			margin-right: 30px;
+			padding-left: 3px;
+		}
+		.tag-contont {
+			display: inline;
+			float: right;
+			width: 718px;
+			// height: 270px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+
+			.tag-contont-title {
+				height: 42px;
+				padding-left: 20px;
+				background-color: #fbfbfb;
+				line-height: 42px;
+				color: #999;
+				font-size: 16px;
+			}
+			.tag-contont-title-selected {
+				height: 42px;
+				border-bottom: 1px solid #eee;
+				background-color: #fbfbfb;
+				line-height: 42px;
+
+				.selected {
+					position: relative;
+					display: inline;
+					float: left;
+					padding: 0 25px 0 10px;
+					border-right: 1px solid #eee;
+					color: #999;
+					font-size: 16px;
+
+					.selected-close {
+						display: block;
+						position: absolute;
+						right: 10px;
+						top: 17px;
+						content: '';
+						width: 9px;
+						height: 8px;
+						background: url(images/sprite-crm.png) no-repeat -247px -87px;
+					}
+					&:hover {
+						background-color: #5871a7;
+						color: #fff;
+
+						.selected-close {
+							background: url(images/sprite-crm.png) no-repeat -247px -97px;
+							cursor: pointer;
+						}
+					}
+				}
+				.modified-selected {
+					display: inline;
+					float: right;
+					margin-right: 15px;
+					color: #5871a7;
+					text-decoration: none;
+				}
+			}
+			.tag-contont-label {
+				height: 150px;
+				padding: 10px 20px;
+				color: #999;
+				overflow: hidden;
+
+				.tag-content-tag {
+					position: relative;
+					display: inline;
+					float: left;
+					height: 26px;
+					margin: 10px 20px 10px 0;
+					padding: 0 10px;
+					border: 2px solid #f6f6f6;
+					background-color: #f6f6f6;
+					line-height: 26px;
+					color: #555;
+					font-size: 16px;
+					cursor: pointer;
+
+					&:hover {
+						border: 2px solid #5871a7;
+						background-color: #fff;
+						color: #5871a7;
+					}
+					&:hover:after {
+						position: absolute;
+						right: -2px;
+						bottom: -2px;
+						content: '';
+						width: 13px;
+						height: 13px;
+						background: url(images/sprite-crm.png) no-repeat -230px -93px;
+					}
+					&.current {
+						border: 2px solid #5871a7;
+						background-color: #fff;
+						color: #5871a7;
+					}
+					&.current:after {
+						position: absolute;
+						right: -2px;
+						bottom: -2px;
+						content: '';
+						width: 13px;
+						height: 13px;
+						background: url(images/sprite-crm.png) no-repeat -230px -93px;
+					}
+				}
+			}
+			.tag-contont-button {
+				height: 30px;
+				padding: 15px 0 15px 20px;
+				background-color: #fbfbfb;
+				line-height: 30px;
+
+				.link-do {
+					display: inline;
+					float: left;
+					height: 28px;
+					margin-right: 10px;
+					padding: 0 10px;
+					border: 1px solid #ccc;
+					border-radius: 2px;
+					line-height: 28px;
+					color: #555;
+					font-size: 16px;
+					text-align: center;
+
+					&:hover {
+						background-color: #eee;
+						text-decoration: initial;
+					}
+				}
+			}
+		}
+		.input-text-num {
+			width: 40px;
+		}
+		.num-to-num {
+			padding: 0 5px;
+		}
+	}
+	.crm-dialog-button {
+		height: 38px;
+		margin-top: 30px;
+
+		&.alignment {
+			margin-left: 90px;
+		}
+		.dialog-button-submit {
+			display: inline;
+			float: left;
+			height: 36px;
+			margin-right: 20px;
+			padding: 0 40px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			line-height: 36px;
+			color: #555;
+			font-size: 20px;
+			text-align: center;
+			text-decoration: none;
+			background-color: #f6f6f6;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+		.dialog-button-cancal {
+			display: inline;
+			float: left;
+			height: 38px;
+			line-height: 38px;
+			color: #555;
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+}

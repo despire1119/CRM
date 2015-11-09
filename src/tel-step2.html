@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon5"></i>活动
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon6"></i>设置
+            </a>
+        </div>
+        
+        <!-- 标签页展示主体内容 -->
+        <div class="tab-content">
+            <h2 class="tab-content-title">新建营销活动</h2>
+            <div class="new-step">
+                <ul>
+                    <li eq="1" class="step-list">
+                        <p class="step-list-title">基本信息配置</p>
+                    </li>
+                    <li eq="2" class="step-list current">
+                        <p class="step-list-title">完成</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="over-tab-content">
+                <img class="over-success" src="images/over-success.jpg" data-src="./images/over-success.jpg" baseurl="./assets/" alt="">
+                <p class="over-title">苏宁会员的营销活动已经创建成功！</p>
+                <p class="over-buttons">
+                    <a class="click-view-butt">返回活动列表</a><a class="click-view-butt">回首页</a>
+                </p>               
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

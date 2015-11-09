@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+     <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog" style="height:460px; width:700px;">
+        <h2>客户群选择</h2>
+        <div class="search-zone">
+            <div class="search-tip">最多选择10个测试人员</div>
+        </div>
+        <div class="detail-sort-dialog">
+            <table class="results-content-table">
+                <tr class="ths-name">
+                    <th class="th-name w80"><input type="checkbox">姓名</th>
+                    <th class="th-name w100">手机号</th>
+                    <th class="th-name w180">邮箱</th>
+                    <th class="th-name w180">易购账户</th>
+                    <th class="th-name w100">操作</th>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">某某某</td>
+                    <td class="td-name">13977777777</td>
+                    <td class="td-name">51399111@qq.com</td>
+                    <td class="td-name">13977777777</td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">删除</a><a href="javascript:;" class="link-do">修改</a></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox"><input type="text" class="input-name"></td>
+                    <td class="td-name"><input type="text" class="input-tel"></td>
+                    <td class="td-name"><input type="text" class="input-mail"></td>
+                    <td class="td-name"><input type="text" class="input-mail"></td>
+                    <td class="td-name"><a href="javascript:;" class="link-do">删除</a><a href="javascript:;" class="link-do">保存</a></td>
+                </tr>
+            </table>
+        </div>
+        <p class="new-test">
+            <a href="javascript:;" class="new-test-people">+ 新增</a>
+            <span class="warning"><i class="icon"></i>请先删除部分人员</span>
+        </p>
+        <dl class="clearfix">
+            <dd class="opt-top clearfix">
+                <a href="javascript:void(0);" class="btn-confirm" title="确定">确定</a> 
+                <a href="javascript:void(0);" class="btn-cancle" title="取消">取消</a>
+            </dd>
+        </dl>
+    </div>
+	<!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+ 	<!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

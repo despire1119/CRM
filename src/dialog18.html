@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+     <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog" style="height:460px; width:700px;">
+        <h2>生成短链</h2>
+        <!-- <p class="link-shot-tip">请将生成的短链接复制粘贴至下面短信内容输入框中。</p>
+        <div class="link-shot-input">
+            <span>短链接：</span><input type="text" class="textbox w300">
+        </div> -->
+        <div class="search-zone">
+            <div class="link-tip">请将生成的短链接复制粘贴至下面短信内容输入框中。</div>
+        </div>
+        <dl>
+            <dt>短链接：</dt>
+            <dd><input type="text" class="textbox w300"></dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>&nbsp;</dt>
+            <dd class="opt-top clearfix">
+                <a href="javascript:void(0);" class="btn-confirm" title="确定">复制短链接</a> 
+                <a href="javascript:void(0);" class="btn-cancle" title="取消">取消</a>
+            </dd>
+        </dl>
+    </div>
+	<!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+ 	<!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

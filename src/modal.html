@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon5"></i>活动
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon6"></i>设置
+            </a>
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon7"></i>模型
+            </a>
+        </div>
+        
+        <!-- 标签页展示主体内容 -->
+        <div class="tab-content modal">
+            <div class="modal-select-wrap">
+                <p class="modal-tab-bt clearfix">
+                    <a href="javascript:;" class="cur">标签市场</a>
+                    <a href="javascript:;">标签收藏</a>
+                    <a href="javascript:;">最新标签</a>
+                </p>
+                <div class="modal-tab-list">
+                    <p class="list-tab clearfix">
+                        <a href="javascript:;">个人信息</a>
+                        <a href="javascript:;">会员信息</a>
+                        <a href="javascript:;">位置信息</a>
+                    </p>
+                    <!-- 筛选结果表格 -->
+                    <table class="results-content-table modal-table">
+                        <tr class="ths-name">
+                            <th class="th-name w80">标签名称</th>
+                            <th class="th-name w200">标签选项</th>
+                            <th class="th-name w80">操作</th>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                        <tr class="tds-name">
+                            <td class="td-name">会员等级</td>
+                            <td class="td-name">新人、v1、v2 、v3</td>
+                            <td class="td-name"><a class="link-do" href="javascript:;">修改</a><a class="link-do" href="javascript:;">删除</a></td>
+                        </tr>
+                    </table>
+                    <!-- 分页 -->
+                    <div class="paging">
+                        <span class="item-span first">&lt;</span><span class="item-span current">1</span><span class="item-span">2</span><span class="item-span">3</span><span class="item-span">4</span><span class="special">…</span><span class="item-span">10</span><span class="item-span last">&gt;</span>
+                    </div>
+                    <p class="modal-add-bt">已选择的标签</p>
+                    <ul class="modal-add-items clearfix">
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                        <li class="add-item">会员管理区域<i class="close"></i></li>
+                    </ul>
+                    <a href="javascript:;" class="modal-next">下一步</a>
+                </div>
+            </div>
+            <h2 class="tab-content-title">新建模型</h2>
+            <div class="form-content">
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">营销目的:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">销售</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">营销目的:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">通讯-手机</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">目标品类:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">高端机（2900以上）</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">品类维度:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">销售</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">品牌:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">苹果</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">&nbsp;</dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="choose-link">预估用户数</a>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">&nbsp;</dt>
+                    <dd class="form-dd">
+                        预估营销用户数： 3,900,000
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">百分比限定:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <img src="temp/ranger.png" alt="" />
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">自定义限定:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <input type="text" class="textbox" disabled>
+                    </dt>
+                </dl>
+                <dl class="form-dl modal-dl">
+                    <dt class="form-dt modal-dt">
+                        <label class="form-dt-label">标签</label>
+                    </dt>
+                    <dd class="form-dd">                        
+                        <div class="modal-dd clearfix">
+                            <p class="modal-dd-text">会员管理区域、会员等级、性别、城市区县、 是否有车 </p>
+                            <a class="modal-do"><i></i><span>添加标签</span></a>
+                        </div>                        
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">名称:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <input type="text" class="textbox" placeholder="请输入名称">
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">有效期:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <input type="text" class="textbox timebox" placeholder="请选择日期" />
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">执行渠道:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <select class="select-text-style">
+                            <option value="全部">短信</option>
+                        </select>
+                    </dt>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">&nbsp;</dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="storage-data-btn">创建人群</a>
+                    </dd>
+                </dl>                              
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

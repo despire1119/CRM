@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon5"></i>活动
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon6"></i>设置
+            </a>
+        </div>
+        
+        <!-- 标签页展示主体内容 -->
+        <div class="tab-content">
+            <h2 class="tab-content-title">活动审核<a href="javascript:;" class="modified">修改</a></h2>
+            <div class="form-content style-padding-bottom">
+                <h2 class="basic-info">活动基本信息</h2>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动编号:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>C121312314</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动名称:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>818母婴大促</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动开始日期:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>2015.8.15</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动结束日期:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>2015.8.15</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">执行开始日期:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>2015.8.15</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">执行结束日期:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>2015.8.15</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">客户群选择:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span class="configuration-num">共计<em>1200</em>人</span><a href="javascript:;" class="view-link">查看详细</a>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动发起方:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>默认带出</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动类型:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>品类</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">活动渠道:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>短息</span>
+                    </dd>
+                </dl>                
+                <h2 class="basic-info">扩展信息</h2>                    
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">测试人员配置:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="view-link">查看详细</a>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">费用:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>￥3,000</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">费用归属:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>活动发起方</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">营销资源:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <span>账号券</span>
+                        <span class="span-title">促销活动编码：</span>
+                        <span>6666666666</span>
+                        <span class="span-title">券面值：</span>
+                        <span>￥200</span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">短信内容:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="view-link">查看详细</a>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">审批历史:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="view-link">查看详细</a>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">测试发送:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="choose-link">测试短信</a>
+                        <a href="javascript:;" class="choose-link">测试券</a>
+                    </dd>
+                </dl>
+                <h2 class="basic-info"><label><input type="radio" name="check-agree" value="true">审批通过</label></h2>
+                <dl class="form-dl" id="passCheck">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">备注:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <textarea class="remark textbox" maxlength="200"></textarea><span class="input-value-length"></span>
+                    </dd>
+                </dl>
+                <h2 class="basic-info"><label><input type="radio" name="check-agree" value="false">驳回</label></h2>
+                <dl class="form-dl" id="rejectCheck">
+                    <dt class="form-dt">
+                        <label class="form-dt-label"><em class="required">*</em>备注（必填）:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <textarea class="remark textbox" maxlength="200"></textarea><span class="input-value-length"></span>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">&nbsp;</dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="storage-data-btn">提交</a>
+                    </dd>
+                </dl>                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

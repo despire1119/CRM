@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+     <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog" style="height:460px; width:700px;">
+        <h2>客户群选择</h2>
+        <div class="search-zone">
+            <input type="text" maxlength="80" class="search-input"/>
+            <a href="javascript:void(0);" title="搜索" class="btn-search">搜索</a>
+            <div class="search-tip">最多选择5个</div>
+        </div>
+        <div class="detail-sort-dialog">
+            <table class="results-content-table">
+                <tr class="ths-name">
+                    <th class="th-name w200">客户群ID</th>
+                    <th class="th-name w80">客户群名称</th>
+                    <th class="th-name w80">实际数量</th>
+                    <th class="th-name w80">渠道</th>
+                    <th class="th-name w140">创建时间</th>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                    <td class="td-name"><span title="空桶制冷节">空桶制冷节</span></td>
+                    <td class="td-name"><span title="空桶制冷节">51,399</span></td>
+                    <td class="td-name"><span title="空桶制冷节">APP PUSH</span></td>
+                    <td class="td-name">2015-12-12 15:00</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                    <td class="td-name"><span title="空桶制冷节">空桶制冷节</span></td>
+                    <td class="td-name"><span title="空桶制冷节">51,399</span></td>
+                    <td class="td-name"><span title="空桶制冷节">APP PUSH</span></td>
+                    <td class="td-name">2015-12-12 15:00</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                    <td class="td-name"><span title="空桶制冷节">空桶制冷节</span></td>
+                    <td class="td-name"><span title="空桶制冷节">51,399</span></td>
+                    <td class="td-name"><span title="空桶制冷节">APP PUSH</span></td>
+                    <td class="td-name">2015-12-12 15:00</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                    <td class="td-name"><span title="空桶制冷节">空桶制冷节</span></td>
+                    <td class="td-name"><span title="空桶制冷节">51,399</span></td>
+                    <td class="td-name"><span title="空桶制冷节">APP PUSH</span></td>
+                    <td class="td-name">2015-12-12 15:00</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><input type="checkbox">SMS_0713_110345123456</td>
+                    <td class="td-name"><span title="空桶制冷节">空桶制冷节</span></td>
+                    <td class="td-name"><span title="空桶制冷节">51,399</span></td>
+                    <td class="td-name"><span title="空桶制冷节">APP PUSH</span></td>
+                    <td class="td-name">2015-12-12 15:00</td>
+                </tr>
+            </table>
+        </div>
+        <dl class="clearfix">
+            <dd class="opt-top clearfix">
+                <a href="javascript:void(0);" class="btn-confirm" title="确定">确定</a> 
+                <a href="javascript:void(0);" class="btn-cancle" title="取消">取消</a>
+            </dd>
+        </dl>
+    </div>
+	<!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+ 	<!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+    <!--<![endif]-->
+    <input type="button" id="alert" value="提示alert" />
+    <input type="button" id="tip" value="提示tip" />
+    <input type="button" id="confirm" value="确认confirm" />
+    <input type="button" id="iframe" value="调用iframe" />
+    <input type="button" id="dialog" value="用于自定义弹出层" />
+    <div id="divhide" style="display: none">我是隐藏内容</div>
+    <div id="wrap" style="width: 400px; height: 400px; border: 1px solid #000;margin:0 auto;position:relative;">
+        在这个div弹出层
+        <input type="button" id="confirmDIV" value="在div中进行弹出" />
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <!-- build:js ./assets/js/me.base.js -->
+    <script type="text/javascript" src="assets/js/me.base.js"></script>
+    <!-- endbuild -->
+    <!-- build:css ./assets/css/me.toast.css -->
+    <link rel="stylesheet" href="assets/css/me.toast.css" />
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        var a;
+        $(function () {
+            $("#alert").click(function () {
+                me.toast.alert("系统最多支持10个标签的选择");
+            });
+            $("#tip").click(function () {
+                me.toast.tip("3秒后我就自动关闭", 3);
+            });
+            $("#confirm").click(function () {
+                a=me.toast.confirm("确认取消收藏该标签？", function () { }, function () { });
+            });
+            $("#iframe").click(function () {
+                me.toast.open("http://suning.com", {
+                    width: 800,
+                    height: 400,
+                    title: '标题'
+                });
+            });
+            $("#dialog").click(function () {
+                new me.toast({
+                    content: $("#divhide").html(),
+                    title: '标题'
+                }, function () {
+                    alert("确认回调,返回true就会自动关闭窗口");
+                }, function () {
+                    alert("取消回调,返回true就会自动关闭窗口");
+                });
+            });
+            $("#confirmDIV").click(function () {
+                me.toast.confirm("确认取消收藏该标签？", function () { }, function () { }).position($(this).parent("div"));
+            });
+        });
+    </script>
+</body>
+</html>

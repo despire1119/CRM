@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <link rel="stylesheet" href="./assets/css/crm.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon5"></i>活动
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon6"></i>设置
+            </a>
+        </div>
+        
+        <!-- 标签页展示主体内容 -->
+        <div class="tab-content">
+            <h2 class="tab-content-title">审批修改</h2>
+            <div class="new-step">
+                <ul>
+                    <li eq="1" class="step-list">
+                        <p class="step-list-title">基本信息配置</p>
+                    </li>
+                    <li eq="2" class="step-list current">
+                        <p class="step-list-title">营销内容配置</p>
+                    </li>
+                    <li eq="3" class="step-list">
+                        <p class="step-list-title">完成</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-content style-dt-width sms">
+                <h2 class="basic-info">&nbsp;</h2>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label">短信内容:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <textarea class="sms-filed-editable textbox" placeholder="&#x8BF7;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x81F3;&#x6B64;&#x8F93;&#x5165;"></textarea>
+                        <p class="clearfix"></p>
+                        <a href="javascript:;" class="choose-link">优秀案例参考</a>
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label"><input type="checkbox" class="m6">短信链接:</label>
+                    </dt>
+                    <dd class="form-dd">
+                        <input type="text" class="textbox w300" placeholder="&#x8BF7;&#x8F93;&#x5165;&#x77ED;&#x4FE1;&#x94FE;&#x63A5;"><input type="button" class="list-import-btn" value="&#x751F;&#x6210;&#x77ED;&#x94FE;">
+                    
+                </dd></dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">
+                        <label class="form-dt-label"><input type="checkbox" class="m6">导入券&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    </dt>
+                    <dd class="form-dd">
+                        &nbsp;
+                    </dd>
+                </dl>
+                <dl class="form-dl">
+                    <dt class="form-dt">&nbsp;</dt>
+                    <dd class="form-dd">
+                        <a href="javascript:;" class="storage-data-btn">提交审批</a>
+                        <a class="return" href="javascript:;">保存</a>
+                        <a class="return" href="javascript:;">返回上一步</a>
+                    </dd>
+                </dl>
+                <div class="sms-position">
+                    <div class="sms-filed-preview-bg">
+                        <div class="sms-filed-preview"></div>
+                    </div>
+                </div>                              
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <script src="./assets/js/ECode.calendar.js"></script>
+    <script src="./assets/js/crm.js"></script>
+</body>
+</html>

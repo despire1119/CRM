@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+     <!-- build:css ./assets/css/calendar.css -->
+    <link rel="stylesheet" href="css/calendar.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+        </script>
+    <![endif]-->
+</head>
+<body>
+    
+    <div class="crm-dialog" style="height:450px; width:700px;">
+        <h2>日志</h2>
+        <div class="dialog-log-box">
+            <table class="dialog-log-table">
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">创建时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">最后修改时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">草稿提交时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">测试发送开始时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">审核通过时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">驳回时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">会员排重开始时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"><span>操作人:</span>12021111</td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">会员排重开始时间:</span>2014-10-10 12:00</td>
+                    <td class="td-name"></td>
+                </tr>
+                <tr class="tds-name">
+                    <td class="td-name"><span class="w140">会员排重人数:</span>20,000</td>
+                    <td class="td-name"></td>
+                </tr>
+            </table>
+        </div>
+        <dl class="clearfix">
+            <a href="javascript:void(0);" class="btn-confirm" title="确定">确定</a>
+        </dl>
+    </div>
+	<!-- build:js ./assets/js/ECode.calendar.js -->
+    <script src="js/ECode.calendar.js"></script>
+    <!-- endbuild -->
+ 	<!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

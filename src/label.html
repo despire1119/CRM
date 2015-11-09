@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM</title>
+    <meta name="keywords" content="项目关键词" />
+    <meta name="description" content="项目描述" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+    
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <!-- build:css ./assets/css/crm.css -->
+    <link rel="stylesheet" href="css/crm.scss" />
+    <!-- endbuild -->
+    <!--[if IE 6]>
+        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix(".crm-top-logo");
+        </script>
+    <![endif]-->
+</head>
+<!--[if lt IE 7 ]><body class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><body class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><body class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><body class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body><!--<![endif]-->
+
+    <!-- 头部工具栏 -->
+    <div class="crm-top-bar">
+        <div class="crm-wrapper clearfix">
+            <p class="crm-top-logo">苏宁会员营销平台</p>
+            <div class="crm-top-user">
+                <a class="todo-detail clearfix">
+                    <i class="icon"></i>您当前有<em class="num">6</em>条待办！
+                </a>
+                <span class="user-detail">
+                    <i class="icon"></i>张某某<em class="userID">(18888888)</em>
+                </span>
+                <a class="user-exit" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="crm-wrapper clearfix">        
+        <!-- 导航标签 -->
+        <div class="nav-tab">
+            <a href="javascript:;" class="nav-tab-item current">
+                <i class="item-icon1"></i>首页
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon2"></i>标签
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon3"></i>人群
+            </a>
+            <a href="javascript:;" class="nav-tab-item">
+                <i class="item-icon4"></i>权限
+            </a>
+        </div>
+        
+        <!-- 标签页展示主体内容 -->
+        <div class="tab-content">
+            <h2 class="tab-content-title">标签</h2>
+            <p class="label-tab-title">
+                <a href="javascript:;" class="label-tab-title-item">全部标签</a>
+                <a href="javascript:;" class="label-tab-title-item">我收藏的标签</a>
+            </p>
+            <!-- 全部标签内容 -->
+            <div class="label-tab-content">
+                
+                <!-- 标签及二级展示 -->
+                <div class="description-tag clearfix">
+                    <ol>
+                        <li class="description-tag-item">
+                            <span>用户信息</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">个人信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">会员信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">家庭信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">账号信息</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户特征</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">行为偏好</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">会员价值</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">生命周期</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">用户分群</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户交易</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">购物记录</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">理财记录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item current">
+                            <span>用户轨迹</span>
+                            <div class="description-tag-item-second">
+                                <ul> 
+                                    <li class="second-item-name"><a href="javasrcipt:;">注册</a></li>
+                                    <li class="second-item-name"><a class="current" href="javasrcipt:;">浏览</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">搜索</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">收藏</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">购物车</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">服务评价</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户关系</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">家庭关系</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">位置关系</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">社会关系</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <p class="results-title-tag">全部标签<em>&gt;</em>交互类<em>&gt;</em>浏览：共筛选出<span class="num">60</span>条标签</p>
+                
+                <!-- 筛选结果表格 -->
+                <table class="results-content-table">
+                    <tr class="ths-name">
+                        <th class="th-name w120">标签名称</th>
+                        <th class="th-name w200">标签描述</th>
+                        <th class="th-name w510">标签选项</th>
+                        <th class="th-name w80">操作</th>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">收藏</a></td>
+                </table>
+
+                <!-- 分页 -->
+                <div class="paging">
+                    <span class="item-span first">&lt;</span><span class="item-span current">1</span><span class="item-span">2</span><span class="item-span">3</span><span class="item-span">4</span><span class="special">…</span><span class="item-span">10</span><span class="item-span last">&gt;</span>
+                </div>
+            </div>
+
+            <!-- 收藏标签内容 -->
+            <div class="label-tab-content">
+                <!-- 标签及二级展示 -->
+                <div class="description-tag clearfix">
+                    <!-- <ol>
+                        <li class="description-tag-item">
+                            <span>用户信息</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">个人信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">会员信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">家庭信息</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">账号信息</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户特征</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">行为偏好</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">会员价值</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">生命周期</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">用户分群</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户交易</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">购物记录</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">理财记录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item current">
+                            <span>用户轨迹</span>
+                            <div class="description-tag-item-second">
+                                <ul> 
+                                    <li class="second-item-name"><a href="javasrcipt:;">注册</a></li>
+                                    <li class="second-item-name"><a class="current" href="javasrcipt:;">浏览</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">搜索</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">收藏</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">购物车</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">服务评价</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="description-tag-item">
+                            <span>用户关系</span>
+                            <div class="description-tag-item-second">
+                                <ul>
+                                    <li class="second-item-name"><a href="javasrcipt:;">家庭关系</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">位置关系</a></li>
+                                    <li class="second-item-name"><a href="javasrcipt:;">社会关系</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol> -->
+                </div>
+
+                <p class="results-title-tag">全部标签<em>&gt;</em>交互类<em>&gt;</em>浏览：共筛选出<span class="num">60</span>条标签</p>
+                
+                <!-- 筛选结果表格 -->
+                <table class="results-content-table">
+                    <tr class="ths-name">
+                        <th class="th-name w120">标签名称</th>
+                        <th class="th-name w200">标签描述</th>
+                        <th class="th-name w510">标签选项</th>
+                        <th class="th-name w80">操作</th>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                    <tr class="tds-name">
+                        <td class="td-name">1天浏览点击量</td>
+                        <td class="td-name"><span title="1天浏览点击量描述">1天浏览点击量描述</span></td>
+                        <td class="td-name"><span title="事业部：空调、黑电、冰洗、通讯、厨卫、电脑">事业部：空调、黑电、冰洗、通讯、厨卫、电脑</span></td>
+                        <td class="td-name"><a class="link-do" href="javascript:;">取消收藏</a></td>
+                    </tr>
+                </table>
+
+                <!-- 分页 -->
+                <div class="paging">
+                    <span class="item-span first">&lt;</span><span class="item-span current">1</span><span class="item-span">2</span><span class="item-span">3</span><span class="item-span">4</span><span class="special">…</span><span class="item-span">10</span><span class="item-span last">&gt;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入项目js资源文件,并配置构建地址演示 -->
+    <!-- build:js ./assets/js/crm.js -->
+    <script type="text/javascript" src="js/crm.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
