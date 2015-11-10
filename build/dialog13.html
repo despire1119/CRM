@@ -25,23 +25,34 @@
 </head>
 <body>
 
-	<div class="crm-dialog marriage-status" style="height:600px; width:700px;">
-		<h2>会员管理区域</h2>
+	<div class="crm-dialog marriage-status" style="height:800px; width:800px;">
+		<h2>兴趣点管理</h2>
 		<dl class="clearfix text-dl">
-			<dt>标签描述：</dt>
-			<dd><div id="area"></div></dd>
+			<dt>标签选项：</dt>
+			<dd class="dialog-label-lst" id="dialogLabelList">
+				<div class="dialog-label first" id="dialogLabelInit">
+					<div class="dialog-area-select"></div>
+					<div class="dialog-interest clearfix">
+						<div class="dialog-interest-big"></div>
+						<div class="dialog-interest-small"></div>
+						<a href="javascript:void(0);" class="link-more">删除</a>
+					</div>
+				</div>
+				<div class="dialog-label dialog-label-clone">
+					<div class="dialog-area-select"></div>
+					<div class="dialog-interest clearfix">
+						<div class="dialog-interest-big"></div>
+						<div class="dialog-interest-small"></div>
+						<a href="javascript:void(0);" class="link-more">删除</a>
+					</div>
+				</div>
+			</dd>
 		</dl>
-		<dl class="clearfix text-dl-dialog">
-			<dt>兴趣点大类：</dt>
-			<dd><div id="interest-big"></div></dd>
-		</dl>
-		<dl class="clearfix text-dl-dialog">
-			<dt>兴趣点小类：</dt>
-			<dd><div id="interest-small"></div></dd>
-		</dl>
-		<dl class="clearfix text-dl-dialog">
-			<dt>兴趣点：</dt>
-			<dd><div id="interest-hot"></div></dd>
+		<dl class="clearfix text-dl">
+			<dt>&nbsp;</dt>
+			<dd>
+				<a href="javascript:void(0);" id="addDialogLabel" class="link-more">添加兴趣点</a>
+			</dd>
 		</dl>
 
 		<dl class="clearfix">
@@ -55,8 +66,10 @@
 	<script src="./assets/js/ECode.calendar.js"></script>
     <script type="text/javascript" src="http://image.suning.cn/public/component/citySelect/1.0.0/New.CitySelect.min.js"></script>
     <script>
-    	$("#area").SnAddress({		   
-		    complete: function (items,bool) {
+    	// 初始兴趣点
+    	$("#dialogLabelInit").find('.dialog-area-select').SnAddress(
+    		{
+		    	complete: function (items,bool) {
 			        if(bool){
 			        //组件初始化被执行
 			        }else{
@@ -64,15 +77,21 @@
 			        }
 			        console.log(items);
 			    }
-		    }, [
-		        {name: '安徽', code: '110', id: '110'},
-		        {name: '黄山市', code: '559', id: '9010'},
+    		}, 
+		    [
+		        {name: '', code: '', id: ''},
+		        {name: '', code: '', id: ''},
 		        {name: '', code: '', id: ''},
 		        {name: '', code: '', id: ''}
 		    ]
-		)
-    	$("#interest-big").SnAddress({		   
-		    complete: function (items,bool) {
+		);
+		$("#dialogLabelInit").find('.dialog-interest-big').SnAddress(
+			{
+				columns: [
+					{state: 'prov', text: '请选择兴趣点大类', hide: false, addClass: ''},
+					{state: 'city', text: '请选择兴趣点小类', hide: false, addClass: ''}
+				],
+				complete: function (items,bool) {
 			        if(bool){
 			        //组件初始化被执行
 			        }else{
@@ -80,15 +99,18 @@
 			        }
 			        console.log(items);
 			    }
-		    }, [
-		        {name: '安徽', code: '110', id: '110'},
-		        // {name: '黄山市', code: '559', id: '9010'},
-		        // {name: '', code: '', id: ''},
-		        // {name: '', code: '', id: ''}
-		    ]
-		)
-		$("#interest-small").SnAddress({		   
-		    complete: function (items,bool) {
+			}, 
+			[
+				{name: '', code: '', id: ''},
+		        {name: '', code: '', id: ''}
+			]
+		);
+		$("#dialogLabelInit").find('.dialog-interest-small').SnAddress(
+			{
+				columns: [
+					{state: 'prov', text: '请选择兴趣点', hide: false, addClass: ''}
+				],
+				complete: function (items,bool) {
 			        if(bool){
 			        //组件初始化被执行
 			        }else{
@@ -96,29 +118,108 @@
 			        }
 			        console.log(items);
 			    }
-		    }, [
-		        {name: '安徽', code: '110', id: '110'},
-		        // {name: '黄山市', code: '559', id: '9010'},
-		        // {name: '', code: '', id: ''},
-		        // {name: '', code: '', id: ''}
-		    ]
-		)
-		$("#interest-hot").SnAddress({		   
-		    complete: function (items,bool) {
-			        if(bool){
-			        //组件初始化被执行
-			        }else{
-			        //选择地址后被执行
-			        }
-			        console.log(items);
-			    }
-		    }, [
-		        {name: '安徽', code: '110', id: '110'},
-		        // {name: '黄山市', code: '559', id: '9010'},
-		        // {name: '', code: '', id: ''},
-		        // {name: '', code: '', id: ''}
-		    ]
-		)
+			}, 
+			[
+				{name: '', code: '', id: ''}
+			]
+		);
+
+		// 新增兴趣点
+
+		var labelNumber = 1;
+		var limited = 5;
+
+		var checkLabelNumber = function(){
+			var deleteElems = $('#dialogLabelList').find('.link-more');
+			if(labelNumber > 1){
+				deleteElems.show();
+				if(labelNumber >= limited){
+					$('#addDialogLabel').hide();
+				}else{
+					$('#addDialogLabel').show();
+				}
+			}else{
+				deleteElems.hide();
+			}
+		}
+
+		// 增加
+		$('#addDialogLabel').on('click', function(){
+			labelNumber++;
+			var cloneNode = $('.dialog-label-clone');
+			var newLabel = cloneNode.clone().removeClass('dialog-label-clone');
+			var newAreaSelect = newLabel.find('.dialog-area-select');
+			var newInterestBig = newLabel.find('.dialog-interest-big');
+			var newInterestSmall = newLabel.find('.dialog-interest-small');
+			$('#dialogLabelList').append(newLabel);
+			checkLabelNumber();
+
+			// 标签选项
+			newAreaSelect.SnAddress(
+				{
+			    	complete: function (items,bool) {
+				        if(bool){
+				        //组件初始化被执行
+				        }else{
+				        //选择地址后被执行
+				        }
+				        console.log(items);
+				    }
+	    		}, 
+			    [
+			        {name: '', code: '', id: ''},
+			        {name: '', code: '', id: ''},
+			        {name: '', code: '', id: ''},
+			        {name: '', code: '', id: ''}
+			    ]
+			);
+			// 兴趣大类和兴趣小类
+			newInterestBig.SnAddress(
+				{
+					columns: [
+						{state: 'prov', text: '请选择兴趣点大类', hide: false, addClass: ''},
+						{state: 'city', text: '请选择兴趣点小类', hide: false, addClass: ''}
+					],
+					complete: function (items,bool) {
+				        if(bool){
+				        //组件初始化被执行
+				        }else{
+				        //选择地址后被执行
+				        }
+				        console.log(items);
+				    }
+				}, 
+				[
+					{name: '', code: '', id: ''},
+			        {name: '', code: '', id: ''}
+				]
+			);
+			// 兴趣点
+			newInterestSmall.SnAddress(
+				{
+					columns: [
+						{state: 'prov', text: '请选择兴趣点', hide: false, addClass: ''}
+					],
+					complete: function (items,bool) {
+				        if(bool){
+				        //组件初始化被执行
+				        }else{
+				        //选择地址后被执行
+				        }
+				        console.log(items);
+				    }
+				}, 
+				[
+					{name: '', code: '', id: ''}
+				]
+			);
+		});
+		// 删除
+		$('#dialogLabelList').on('click', '.link-more', function(){
+			$(this).closest('.dialog-label').remove();
+			labelNumber--;
+			checkLabelNumber();
+		});
     </script>
 </body>
 </html>

@@ -27,6 +27,19 @@ i, em, strong, th {
 	font-style: normal;
 	font-weight: normal;
 }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
 .clear {
 	clear: both;
 	display: block;
@@ -1076,6 +1089,19 @@ html, body {
 		}
 	}
 }
+
+.vri-btn {
+  display: none;
+  width: 90px;
+  height: 26px;
+  background: #f6f6f6;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  color: #555555;
+  cursor: pointer;
+
+}
+
 .textbox {
 	height: 28px;
 	line-height: 28px;
@@ -1209,6 +1235,30 @@ html, body {
 			position: relative;
 			float: left;
 			width: 800px;
+      .itm-selected{
+		display: none;
+        position: relative;
+        padding: 5px 10px;
+        border: 1px solid #dddddd;
+        cursor: pointer;
+        &:hover{
+          border: 1px solid #7689b4;
+          .itm-fix{
+            display: inline-block;
+            color: #7689b4;
+          }
+        }
+      }
+      .itm-fix{
+        position: absolute;
+        display: none;
+        height: 27px;
+        right: 0;
+        background: #ffffff;
+        padding: 0 5px;
+        border-top: 1px solid #7689b4;
+        border-bottom: 1px solid #7689b4;
+      }
 			.sms-filed-editable, .push-filed-editable {
 				width: 298px;
 				height: 200px;
@@ -1717,6 +1767,34 @@ html, body {
 .crm-dialog {
 	background-color: #fff;
 
+  .check-27{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    input{
+      margin-right: 5px;
+    }
+    label{
+      em{
+        color: #999;
+      }
+    }
+
+  }
+  .itm-area{
+    width: 657px;
+    margin: auto;
+    span{
+      display: block;
+      float: left;
+      width: 95px;
+      height: 25px;
+      line-height: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
+  }
 	.dialog-tep-textarea {
 	    width: 298px;
 	    height: 118px;
@@ -2089,25 +2167,25 @@ html, body {
 			position: relative;
 			z-index: 202;
 
-			.chooseArea {
-				display: none;
-			}
+			// .chooseArea {
+			// 	display: none;
+			// }
 		}
 		#interest-small {
 			position: relative;
 			z-index: 201;
 
-			.chooseArea {
-				display: none;
-			}
+			// .chooseArea {
+			// 	display: none;
+			// }
 		}
 		#interest-hot {
 			position: relative;
 			z-index: 98;
 
-			.chooseArea {
-				display: none;
-			}
+			// .chooseArea {
+			// 	display: none;
+			// }
 		}
 		&.text-dl {
 			margin-bottom: 10px;
@@ -2973,4 +3051,123 @@ html, body {
 			}
 		}
 	}
+}
+// update by liwei
+.link-more{
+	&:link,&:visited{
+		display: inline-block;
+		color: #5871a7;
+	}
+}
+.dialog-area{
+	margin-top: 20px;
+	&.first{
+		margin-top: 0;
+	}
+	.citybox{
+		z-index: 100;
+	}
+	.dialog-area-select{
+		float: left;
+		z-index: auto;
+		.cityboxbtn{
+			width: 245px;
+		}
+	}
+	.link-more{
+		float: left;
+		margin-left: 10px;
+		display: none;
+	}
+}
+.dialog-area-clone{
+	display:none;
+}
+
+.dialog-label-lst{
+	.citySelect{
+		z-index: auto;
+	}
+	.cityboxbtn{
+		width: 245px;
+	}
+	.citybox{
+		z-index: 100;
+	}
+}
+.dialog-label{
+	margin-top: 20px;
+	&.first{
+		margin-top: 0;
+	}
+}
+.dialog-interest{
+	margin-top: 10px;
+	.dialog-interest-big,
+	.dialog-interest-small{
+		z-index: auto;
+		float: left;
+		margin-right: 10px;
+	}
+	.dialog-interest-small{
+		.cityboxbtn{
+			width: 135px;
+		}
+	}
+	.link-more{
+		float: left;
+		display: none;
+	}
+}
+.dialog-interest-small{
+	.chooseArea{
+		display: none;
+	}
+}
+.dialog-label-add{
+	margin-top: 10px;
+}
+.dialog-label-clone{
+	display: none;
+}
+
+// percent bar
+.percent-bar{
+	float: left;
+	width: 180px;
+	height: 17px;
+	position: relative;
+	margin-top: 6px;
+}
+.percent-value{
+	float: left;
+	margin-left: 10px;
+	width: 38px;
+	text-align: center;
+}
+.percent-bar-bg,
+.percent-bar-btn{
+	border: 1px solid #c6c6c6;
+	background-color: #e6e6e6;
+}
+.percent-bar-bg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 15px;
+	border-radius: 7px;
+}
+.percent-bar-value{
+	height: 15px;
+	background-color: #5871a7;
+	border-radius: 7px;
+}
+.percent-bar-btn{
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+	position: absolute;
+	top: -3px;
+	left: 0;
 }

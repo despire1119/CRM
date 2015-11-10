@@ -9,7 +9,7 @@
     <script>
         var sn = sn || {}
     </script>
-    
+
     <!-- 引入全站公用资源文件 -->
     <!--#include file="/include/resources.shtml"-->
 
@@ -17,143 +17,152 @@
     <link rel="stylesheet" href="./assets/css/me.toast.css">
 
     <link rel="stylesheet" href="./assets/css/crm.css">
-     <link rel="stylesheet" href="./assets/css/calendar.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
     <!--[if IE 6]>
-        <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
-        <script type="text/javascript">
-            DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
-        </script>
+    <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+    </script>
     <![endif]-->
 
     <style type="text/css">
-     dd .d{float: left; width: 100px; height: 34px; border: 1px solid #ccc; text-align: center; overflow: hidden; margin-right: 10px; margin-bottom: 10px;}
+        dd .d {
+            float: left;
+            width: 100px;
+            height: 34px;
+            border: 1px solid #ccc;
+            text-align: center;
+            overflow: hidden;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-	<div class="crm-dialog marriage-status">
-		<h2>弹框使用说明</h2>
-		<dl class="clearfix">
-			<dt>弹框List：</dt>
-			<dd style="width:600px;">
-                <a href="javascript:void(0);" title="" class="d d11">弹框</a>
-                <a href="javascript:void(0);" title="" class="d d10">弹框0</a>
-                <a href="javascript:void(0);" title="" class="d d1">弹框1</a>  
-                <a href="javascript:void(0);" title="" class="d d2">弹框2</a>     
-                <a href="javascript:void(0);" title="" class="d d3">弹框3</a> 
-                <a href="javascript:void(0);" title="" class="d d4">弹框4</a>
-                <a href="javascript:void(0);" title="" class="d d5">弹框5</a>
-                <a href="javascript:void(0);" title="" class="d d6">弹框6</a>
-                <a href="javascript:void(0);" title="" class="d d7">弹框7</a>
-                <a href="javascript:void(0);" title="" class="d d8">弹框8</a>
-                <a href="javascript:void(0);" title="" class="d d9">查看</a>
-                <a href="javascript:void(0);" title="" class="d d12">地址选择器</a>
-                <a href="javascript:void(0);" title="" class="d d13">会员管理区域</a>
-                <a href="javascript:void(0);" title="" class="d d14">日志弹出</a>
-                <a href="javascript:void(0);" title="" class="d d15">客户群弹出</a>
-                <a href="javascript:void(0);" title="" class="d d16">配置测试</a>
-                <a href="javascript:void(0);" title="" class="d d17">案例参考</a>
-                <a href="javascript:void(0);" title="" class="d d18">生成短链</a>
-                <a href="javascript:void(0);" title="" class="d d19">正式发送</a>
-                <a href="javascript:void(0);" title="" class="d d20">审批历史</a>
-                <a href="javascript:void(0);" title="" class="d d21">测试人员配置</a>
-                <a href="javascript:void(0);" title="" class="d d22">发送测试券</a>
-                <a href="javascript:void(0);" title="" class="d d23">查看短信内容</a>
-                <a href="javascript:void(0);" title="" class="d d24">客户群查看</a>
-                <a href="javascript:void(0);" title="" class="d d25">添加模板</a>
-                <a href="javascript:void(0);" title="" class="d d26">排重弹出</a>
-                <a href="javascript:void(0);" title="" class="d d27">修改</a>               
-            </dd>
-		</dl>
-		
-	</div>
-	<script src="./assets/js/ECode.calendar.js"></script>
-    <script src="./assets/js/me.base.js"></script>
- 	<script src="./assets/js/crm.js"></script>
+<div class="crm-dialog marriage-status">
+    <h2>弹框使用说明</h2>
+    <dl class="clearfix">
+        <dt>弹框List：</dt>
+        <dd style="width:600px;">
+            <a href="javascript:void(0);" title="" class="d d11">弹框</a>
+            <a href="javascript:void(0);" title="" class="d d10">弹框0</a>
+            <a href="javascript:void(0);" title="" class="d d1">弹框1</a>
+            <a href="javascript:void(0);" title="" class="d d2">弹框2</a>
+            <a href="javascript:void(0);" title="" class="d d3">弹框3</a>
+            <a href="javascript:void(0);" title="" class="d d4">弹框4</a>
+            <a href="javascript:void(0);" title="" class="d d5">弹框5</a>
+            <a href="javascript:void(0);" title="" class="d d6">弹框6</a>
+            <a href="javascript:void(0);" title="" class="d d7">弹框7</a>
+            <a href="javascript:void(0);" title="" class="d d8">弹框8</a>
+            <a href="javascript:void(0);" title="" class="d d9">查看</a>
+            <a href="javascript:void(0);" title="" class="d d12">地址选择器</a>
+            <a href="javascript:void(0);" title="" class="d d13">会员管理区域</a>
+            <a href="javascript:void(0);" title="" class="d d14">日志弹出</a>
+            <a href="javascript:void(0);" title="" class="d d15">客户群弹出</a>
+            <a href="javascript:void(0);" title="" class="d d16">配置测试</a>
+            <a href="javascript:void(0);" title="" class="d d17">案例参考</a>
+            <a href="javascript:void(0);" title="" class="d d18">生成短链</a>
+            <a href="javascript:void(0);" title="" class="d d19">正式发送</a>
+            <a href="javascript:void(0);" title="" class="d d20">审批历史</a>
+            <a href="javascript:void(0);" title="" class="d d21">测试人员配置</a>
+            <a href="javascript:void(0);" title="" class="d d22">发送测试券</a>
+            <a href="javascript:void(0);" title="" class="d d23">查看短信内容</a>
+            <a href="javascript:void(0);" title="" class="d d24">客户群查看</a>
+            <a href="javascript:void(0);" title="" class="d d25">添加模板</a>
+            <a href="javascript:void(0);" title="" class="d d26">排重弹出</a>
+            <a href="javascript:void(0);" title="" id="sel-config" class="d d27">修改</a>
+        </dd>
+    </dl>
 
-    <script type="text/javascript">
+</div>
+<script src="./assets/js/ECode.calendar.js"></script>
+<script src="./assets/js/me.base.js"></script>
+<script src="./assets/js/crm.js"></script>
 
-        //弹框
-        $(".d1").click(function(){
-            me.toast.open("dialog1.html",{width:700, height:252});
-        });
-        $(".d2").click(function(){
-            me.toast.open("dialog2.html",{width:700, height:220});
-        });
-        $(".d3").click(function(){
-            me.toast.open("dialog3.html",{width:700, height:280});
-        });
-        $(".d4").click(function(){
-            me.toast.open("dialog4.html",{width:700, height:450});
-        });
-        $(".d5").click(function(){
-            me.toast.open("dialog5.html",{width:700, height:420});
-        });
-        $(".d6").click(function(){
-            me.toast.open("dialog6.html",{width:700, height:420});
-        });
-        $(".d7").click(function(){
-            me.toast.open("dialog7.html",{width:700, height:450});
-        });
-        $(".d8").click(function(){
-            me.toast.open("dialog8.html",{width:700, height:320});
-        });
-        $(".d9").click(function(){
-            me.toast.open("dialog_scan.html",{width:460, height:460});
-        });
-        $(".d10").click(function(){
-            me.toast.open("dialog0.html",{width:700, height:180});
-        });
-        $(".d11").click(function(){
-            me.toast.open("dialog10.html",{width:700, height:200});
-        });
-        $(".d12").click(function(){
-            me.toast.open("dialog11.html",{width:700, height:400});
-        });
-        $(".d13").click(function(){
-            me.toast.open("dialog13.html",{width:700, height:600});
-        });
-        $(".d14").click(function(){
-            me.toast.open("dialog14.html",{width:700, height:420});
-        });
-        $(".d15").click(function(){
-            me.toast.open("dialog15.html",{width:700, height:460});
-        });
-        $(".d16").click(function(){
-            me.toast.open("dialog16.html",{width:700, height:460});
-        });
-        $(".d17").click(function(){
-            me.toast.open("dialog17.html",{width:700, height:460});
-        });
-        $(".d18").click(function(){
-            me.toast.open("dialog18.html",{width:700, height:460});
-        });
-        $(".d19").click(function(){
-            me.toast.open("dialog19.html",{width:700, height:460});
-        });
-        $(".d20").click(function(){
-            me.toast.open("dialog20.html",{width:700, height:420});
-        });
-        $(".d21").click(function(){
-            me.toast.open("dialog21.html",{width:700, height:540});
-        });
-        $(".d22").click(function(){
-            me.toast.open("dialog22.html",{width:700, height:540});
-        });
-        $(".d23").click(function(){
-            me.toast.open("dialog23.html",{width:460, height:540});
-        });
-        $(".d24").click(function(){
-            me.toast.open("dialog24.html",{width:700, height:540});
-        });
-        $(".d25").click(function(){
-            me.toast.open("dialog25.html",{width:700, height:540});
-        });
-        $(".d26").click(function(){
-            me.toast.open("dialog26.html",{width:700, height:540});
-        });
-        $(".d27").click(function(){
-            me.toast.open("dialog27.html",{width:700, height:540});
-        });
-    </script>
+<script type="text/javascript">
+
+    //弹框
+    $(".d1").click(function () {
+        me.toast.open("dialog1.html", {width: 700, height: 252});
+    });
+    $(".d2").click(function () {
+        me.toast.open("dialog2.html", {width: 700, height: 220});
+    });
+    $(".d3").click(function () {
+        me.toast.open("dialog3.html", {width: 700, height: 280});
+    });
+    $(".d4").click(function () {
+        me.toast.open("dialog4.html", {width: 700, height: 450});
+    });
+    $(".d5").click(function () {
+        me.toast.open("dialog5.html", {width: 700, height: 420});
+    });
+    $(".d6").click(function () {
+        me.toast.open("dialog6.html", {width: 700, height: 420});
+    });
+    $(".d7").click(function () {
+        me.toast.open("dialog7.html", {width: 700, height: 450});
+    });
+    $(".d8").click(function () {
+        me.toast.open("dialog8.html", {width: 700, height: 320});
+    });
+    $(".d9").click(function () {
+        me.toast.open("dialog_scan.html", {width: 460, height: 460});
+    });
+    $(".d10").click(function () {
+        me.toast.open("dialog0.html", {width: 700, height: 180});
+    });
+    $(".d11").click(function () {
+        me.toast.open("dialog10.html", {width: 700, height: 200});
+    });
+    $(".d12").click(function () {
+        me.toast.open("dialog11.html", {width: 700, height: 400});
+    });
+    $(".d13").click(function () {
+        me.toast.open("dialog13.html", {width: 700, height: 600});
+    });
+    $(".d14").click(function () {
+        me.toast.open("dialog14.html", {width: 700, height: 420});
+    });
+    $(".d15").click(function () {
+        me.toast.open("dialog15.html", {width: 700, height: 460});
+    });
+    $(".d16").click(function () {
+        me.toast.open("dialog16.html", {width: 700, height: 460});
+    });
+    $(".d17").click(function () {
+        me.toast.open("dialog17.html", {width: 700, height: 460});
+    });
+    $(".d18").click(function () {
+        me.toast.open("dialog18.html", {width: 700, height: 460});
+    });
+    $(".d19").click(function () {
+        me.toast.open("dialog19.html", {width: 700, height: 460});
+    });
+    $(".d20").click(function () {
+        me.toast.open("dialog20.html", {width: 700, height: 420});
+    });
+    $(".d21").click(function () {
+        me.toast.open("dialog21.html", {width: 700, height: 540});
+    });
+    $(".d22").click(function () {
+        me.toast.open("dialog22.html", {width: 700, height: 540});
+    });
+    $(".d23").click(function () {
+        me.toast.open("dialog23.html", {width: 460, height: 540});
+    });
+    $(".d24").click(function () {
+        me.toast.open("dialog24.html", {width: 700, height: 540});
+    });
+    $(".d25").click(function () {
+        me.toast.open("dialog25.html", {width: 700, height: 540});
+    });
+    $(".d26").click(function () {
+        me.toast.open("dialog26.html", {width: 700, height: 540});
+    });
+    $(".d27").click(function () {
+        me.toast.open("dialog27.html", {width: 700, height: 300});
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CRM弹框</title>
+    <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        var sn = sn || {}
+    </script>
+
+    <!-- 引入全站公用资源文件 -->
+    <!--#include file="/include/resources.shtml"-->
+
+    <!-- 引入项目css资源文件,并配置构建地址演示 -->
+    <link rel="stylesheet" href="./assets/css/crm.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/public/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix(".vmp-top-logo, .todo-detail, .icon");
+    </script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="crm-dialog" style="width:700px;height: 300px;">
+    <h2>选择品类</h2>
+
+    <p class="check-27">
+        <input type="radio" name="items" id="all" checked/>
+        <label for="all">全品类</label>
+    </p>
+
+    <p class="check-27">
+        <input type="radio" name="items" id="sel"/>
+        <label for="sel">非全品类&nbsp;<em>最多可选6个品类</em></label>
+    </p>
+
+    <div class="itm-area clearfix">
+        <span>
+            <input type="checkbox" class="itm-in" value="aaa"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="bbb"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="ccc"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="ddd"/>
+            母母婴母婴母婴母婴母婴母婴母婴母婴母婴母婴母婴婴
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="eee"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="fff"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="ggg"/>
+            <em>母婴</em>
+        </span>
+        <span>
+            <input type="checkbox" class="itm-in" value="hhh"/>
+            <em>母婴</em>
+        </span>
+    </div>
+    <dl class="clearfix">
+        <dd class="opt-top clearfix">
+            <a href="javascript:void(0);" class="btn-confirm" id="itm-config" title="&#x786E;&#x5B9A;">确定</a>
+            <a href="javascript:void(0);" class="btn-cancle" title="&#x53D6;&#x6D88;">取消</a>
+        </dd>
+    </dl>
+</div>
+<script src="./assets/js/ECode.calendar.js"></script>
+<script src="./assets/js/crm.js"></script>
+</body>
+</html>
